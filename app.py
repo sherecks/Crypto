@@ -6,5 +6,5 @@ app=Flask(__name__)
 
 
 @app.route("/")
-def index();
+def index():
     return render_template("day.html", title="Day a Day")
