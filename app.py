@@ -1,10 +1,23 @@
-from turtle import title
-from unicodedata import name
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from dotenv import load_dotenv
 
-app=Flask(__name__)
+load_dotenv()
+
+def create_app():
+    app=Flask(__name__)
 
 
-@app.route("/")
-def index():
-    return render_template("day.html", title="Day a Day")
+    habits = ["Test Habit", "Test Habit 2"]
+
+    @app.route("/")
+    def day():
+        return render_template("day.html", title="Day a Day")
+
+
+    @app.route("/add", methods=["GET", "POST"])
+    def add_day():
+        if request.form == "POST":
+            pass
+        return render_template("add_day.html", title="Day a day - Add")
+
+    return app
