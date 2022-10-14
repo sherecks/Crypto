@@ -17,7 +17,7 @@
     <header>
         <h1 class="logo-h"><a href="{{ url_for('day') }}" class="link-h">DAY A DAY</a></h1>
         {% if "add" not in request.endpoint %}
-            <a href="{{ url_for('add_day') }}" class="link-h">+ Add New +</a>
+            <a href="{{ url_for('add_day') }}" class="link-h">Add</a>
         {% endif %}
     </header>
 
