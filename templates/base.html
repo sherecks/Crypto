@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="static/css/Style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}" />
     {% block head %}
 
     {% endblock %}
@@ -15,9 +15,9 @@
 <body>
 
     <header>
-        <h1 class="logo-h"><a href="day.html" class="link-h">DAY A DAY</a></h1>
+        <h1 class="logo-h"><a href="{{ url_for('day') }}" class="link-h">DAY A DAY</a></h1>
         {% if "add" not in request.endpoint %}
-            <a href="add_day.html" class="link-h">+ Add New +</a>
+            <a href="{{ url_for('add_day') }}" class="link-h">+ Add New +</a>
         {% endif %}
     </header>
 

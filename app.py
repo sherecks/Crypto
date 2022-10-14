@@ -17,7 +17,7 @@ def create_app():
     @app.route("/add", methods=["GET", "POST"])
     def add_day():
         if request.form == "POST":
-            pass
+            habits.append(request.form.get("habit"))
         return render_template("add_day.html", title="Day a day - Add")
 
     return app
