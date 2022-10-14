@@ -6,7 +6,7 @@
 
 body {
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .link-h {
@@ -16,31 +16,31 @@ body {
   transition: all 1s;
 }
 
-.link-h:hover{
+.link-h:hover {
   color: #f9dba0;
 }
 
-header, main{
+header, main {
   max-width: 800px;
   margin: 0 auto;
   border-radius: 10px;
 }
 
-header{
+header {
   display: flex;
   background-color: black;
   justify-content: space-between;
   align-items: center;
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   font-size: 20px;
-  margin: 20px;
+  margin-top: 25px;
 }
 
-.form-input{
+.form-input {
   font-family: inherit;
   resize: vertical;
   max-width: 800px;
@@ -49,7 +49,7 @@ header{
   background-color: #fafafa;
 }
 
-.form-button{
+.form-button {
   font-weight: bold;
   background-color: #f9dba0;
   cursor: pointer;
@@ -59,7 +59,29 @@ header{
   align-self: flex-end;
   margin-top: 10px;
   width: 100px;
-
-
 }
 
+.dates {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.date-link {
+  text-decoration: none;
+  outline: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+}
+
+.date-link--current {
+  background: #f9dba0;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}/*# sourceMappingURL=Style.css.map */

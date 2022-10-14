@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}" />
     {% block head %}
 
@@ -22,6 +25,16 @@
     </header>
 
     <main>
+        <section class="dates">
+            {% for date in date_range(selected_date) %}
+            <a class="date-link {{ 'dates__link--current' if loop.index0 == 3 else ''}}" href="{{ url_for('day', date=date)}}"">
+                <time class="date" datetime="{{ date }}">
+                    <span>{{date.strftime("%a")}}</span>
+                    <span>{{date.strftime("%d")}}</span>
+                </time>
+            </a>
+            {% endfor %}
+        </section>
         {% block content %}
         {% endblock %}
     </main>
