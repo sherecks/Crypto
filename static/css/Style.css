@@ -2,11 +2,13 @@
 *::after,
 *::before {
   box-sizing: inherit;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 body {
   box-sizing: border-box;
   font-family: "IBM Plex Mono", monospace;
+  background-color: #A9A9A9;
 }
 
 .link-h {
@@ -14,16 +16,17 @@ body {
   color: white;
   margin: 20px;
   transition: all 1s;
+  font-size: 40px;
 }
 
 .link-h:hover {
-  color: #f9dba0;
+  color: #FFD700;
 }
 
 header, main {
   max-width: 800px;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 header {
@@ -45,16 +48,16 @@ header {
   resize: vertical;
   max-width: 800px;
   border: 3px solid black;
-  border-radius: 10px;
-  background-color: #fafafa;
+  border-radius: 4px;
+  background-color: #E0FFFF;
 }
 
 .form-button {
   font-weight: bold;
-  background-color: #f9dba0;
+  background-color: #FFD700;
   cursor: pointer;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 10px;
   align-self: flex-end;
   margin-top: 10px;
@@ -77,11 +80,77 @@ header {
 }
 
 .date-link--current {
-  background: #f9dba0;
+  background: #FFD700;
+  border-radius: 4px;
+}
+
+.date-link:not(.date-link--current):hover {
+  background: #DCDCDC;
+  transition: all 0.5s;
+  border-radius: 4px;
 }
 
 .date {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.date-link:first-of-type,
+.date-link:first-of-type,
+.date-link:nth-of-type(2),
+.date-link:nth-last-of-type(2) {
+  display: none;
+}
+
+@media screen and (min-width: 25rem) {
+  .date-link:nth-of-type(2),
+.date-link:nth-last-of-type(2) {
+    display: block;
+  }
+}
+@media screen and (min-width: 35rem) {
+  .date-link:nth-of-type,
+.date-link:nth-last-of-type {
+    display: block;
+  }
+}
+.habit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  background-color: #FFD700;
+  font-size: 25px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
+.habit-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.habit-name {
+  margin: 0;
+}
+
+.habit-form {
+  width: 100%;
+}
+
+.habit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 25px;
+  color: black;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 4px;
+  text-align: left;
+  cursor: pointer;
 }/*# sourceMappingURL=Style.css.map */
