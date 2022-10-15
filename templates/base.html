@@ -19,16 +19,16 @@
 <body>
 
     <header>
-        <h1 class="logo-h"><a href="{{ url_for('day') }}" class="link-h">DAY A DAY</a></h1>
+        <h1 class="logo-h"><a href="{{ url_for('habits.day') }}" class="link-h">DAY A DAY</a></h1>
         {% if "add" not in request.endpoint %}
-            <a href="{{ url_for('add_day') }}" class="link-h">+</a>
+            <a href="{{ url_for('habits.add_day') }}" class="link-h">+</a>
         {% endif %}
     </header>
 
     <main>
         <section class="dates">
             {% for date in date_range(selected_date) %}
-            <a class="date-link {{ 'date-link--current' if loop.index0 == 3 else ''}}" href="{{ url_for('day', date=date)}}"">
+            <a class="date-link {{ 'date-link--current' if loop.index0 == 3 else ''}}" href="{{ url_for('habits.day', date=date)}}"">
                 <time class="date" datetime="{{ date }}">
                     <span>{{date.strftime("%a")}}</span>
                     <span>{{date.strftime("%d")}}</span>
