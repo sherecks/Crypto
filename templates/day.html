@@ -21,7 +21,7 @@
                         <input type="hidden" id="habitId" name="habitId" value="{{ habit['_id'] }}" />
                         <input type="hidden" id="date" name="date" value="{{ selected_date }}" />
                         <button type="submit" class="habit-button">
-                            {{ habit }}
+                            {{ habit["name"] }}
                         </button>
 
                     </form>
