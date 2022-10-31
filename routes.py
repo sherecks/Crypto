@@ -5,7 +5,7 @@ from flask import Blueprint, render_template, request, url_for, redirect
 pages = Blueprint(
     "habits",__name__, template_folder="templates", static_folder="static"
 )
-habits = ["Test Habit"]
+habits = ["Reunião as 17:00hrs na Empresa"]
 completions = defaultdict(list)
 
 
